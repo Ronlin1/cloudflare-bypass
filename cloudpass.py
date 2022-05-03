@@ -10,11 +10,9 @@ info = scraper.get(url).text
 soup = beauty(info, "html.parser")
 soup = soup.find_all('script')
 
-
+our_data = list()
 for data in soup:
-    print(data.get_text())
-
-# for c in data:
-#     print(c.get_text())
+    our_data.append(data.get_text())
+    # print(data.get_text())
 
 print(our_data)
